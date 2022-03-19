@@ -3,7 +3,6 @@ require_once("../connection.php"); // For connection to database
 $query = "select * from category  "; // Query to select all data about category table
 $result = mysqli_query($con, $query);
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

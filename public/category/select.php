@@ -1,7 +1,7 @@
 <?php
 require_once("category.php");
 // Update category
-if (isset($_POST['update'])) {
+if (isset($_POST['add-category'])) {
     $category = new Category();
     $category->update($_POST,$_GET['ID']);
 } else {

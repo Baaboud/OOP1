@@ -22,7 +22,7 @@ $result = mysqli_query($con, $query);
     ?>
 
     <?php
-    header("location:/board/public/product/index.php");
+    header("location:/oop1/public/product/index.php");
     ?>
 
     <!-- <div class="container">

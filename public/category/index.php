@@ -1,8 +1,7 @@
 <?php
-require_once("../connection.php"); // For connection to database
-$query = "select * from category  "; // Query to select all data about category table
-$result = mysqli_query($con, $query);
-
+require_once("category.php"); // For connection to database
+$category = new Category();
+$categories = $category->selectAll();
 
 ?>
 <!DOCTYPE html>
@@ -34,7 +33,7 @@ $result = mysqli_query($con, $query);
             <div class="card-group my-3 justify-content-center">
                 <!-- <div class="row row-cols-1 row-cols-md-3 g-4 text-center"> -->
                     <?php
-                    while ($row = mysqli_fetch_assoc($result)) {
+                    foreach ($categories as $row) {
                         $cateID = $row['id']; // this coulmn name from database
                         $cateName = $row['name'];
                         $cateDes = $row['description'];
